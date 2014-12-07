@@ -7,8 +7,8 @@ data1$Time <- strptime(paste(data1$Date, data1$Time), "%d/%m/%Y %H:%M:%S")
 data1$Date <- strptime(data1$Date, "%d/%m/%Y")
 
 # Plotting
+png(file="plot1.png")
 par(bg = "transparent")
 hist(data1$Global_active_power,
      col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
-dev.copy(png, file = "plot1.png")
 dev.off()
